@@ -1,12 +1,12 @@
-import { Container } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
 import SearchBar from '../components/SearchBar'
 
 const HomePage = ({ data }) => {
   return (
-    <Container>
+    <Box>
       <SearchBar data={data} />
-    </Container>
+    </Box>
   )
 }
 

@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+}
+
+.box {
+  background-color: #fab1a0;
+  padding: 16px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 25%);
+}
+
+.titleContainer {
+  text-align: center;
+}
+
+.infoContainer {
+  padding: 16px;
+}
+
+.containerBtn {
+  text-align: center;
+}
+
+.containerBtn button {
+  padding: 16px;
+  color: black;
+  background-color: #e17055;
+}
+
+.containerBtn button:hover {
+  background-color: #ff7675;
+  color: white;
+}

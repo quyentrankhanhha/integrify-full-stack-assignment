@@ -1,0 +1,18 @@
+.container {
+  background-color: #fab1a0;
+}
+
+.infoContainer {
+  padding: 6px 8px;
+}
+
+.viewDetailContainer {
+  background-color: #e17055;
+  text-align: center;
+  padding: 6px;
+}
+
+.viewDetailContainer a {
+  text-decoration: none;
+  color: white;
+}

@@ -1,7 +1,16 @@
+import { Container } from '@mui/material'
 import React from 'react'
+import { useLocation } from 'react-router'
+import UserDetail from '../components/UserDetail'
 
 const DetailPage = () => {
-  return <div>DetailPage</div>
+  const location = useLocation()
+
+  return (
+    <Container>
+      <UserDetail data={location.state} />
+    </Container>
+  )
 }
 
 export default DetailPage

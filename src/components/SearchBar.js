@@ -29,10 +29,6 @@ const SearchBar = ({ data }) => {
     const searchWord = event.target.value
     setWordEntered(searchWord)
 
-    // const newFilter = data.filter((value) => {
-    //   return value.name.toLowerCase().includes(searchWord.toLowerCase())
-    // })
-
     const newFilter = data?.filter((item) => {
       return keys?.some((key) => {
         return item[key]?.toLowerCase()?.includes(searchWord?.toLowerCase())
@@ -67,19 +63,19 @@ const SearchBar = ({ data }) => {
             )}
           </Box>
         </Box>
-        {filteredData.length !== 0 && (
-          <Grid
-            container
-            justifyContent='flex-start'
-            className={styles.dataResult}
-          >
-            {filteredData.slice(0, 5).map((info, index) => (
-              <Grid item xs={4} key={index}>
-                <UserCard data={info} />
-              </Grid>
-            ))}
-          </Grid>
-        )}
+        <Grid container spacing={2} justifyContent='flex-start'>
+          {filteredData.length !== 0
+            ? filteredData.slice(0, 5).map((info, index) => (
+                <Grid item xs={4} key={index} style={{ padding: '10px' }}>
+                  <UserCard data={info} />
+                </Grid>
+              ))
+            : data.map((info, index) => (
+                <Grid item xs={4} key={index} style={{ padding: '10px' }}>
+                  <UserCard data={info} />
+                </Grid>
+              ))}
+        </Grid>
       </Box>
     </Box>
   )
